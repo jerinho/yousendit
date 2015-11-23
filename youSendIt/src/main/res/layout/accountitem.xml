@@ -1,0 +1,50 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray" >
+    
+    <TextView
+        android:id="@+id/accountrowdate"
+        android:layout_width="80dp"
+        android:padding="5dp"
+        android:layout_margin="1px"
+        android:textStyle="bold"
+        android:background="@android:color/white"/>
+    
+    <HorizontalScrollView
+        android:padding="5dp"
+        android:layout_margin="1px"
+        android:background="@android:color/white"
+        android:scrollbars="none"
+        android:layout_width="0dp"
+        android:layout_weight="1">
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/accountrowjob"
+	        android:textStyle="bold"
+	        android:scrollHorizontally="true"
+	        android:background="@android:color/white"/>
+        
+    </HorizontalScrollView>
+    
+    <TextView
+        android:id="@+id/accountrowcredit"
+        android:layout_width="60dp"
+        android:padding="5dp"
+        android:layout_margin="1px"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:background="@android:color/white"/>
+    
+    <TextView
+        android:id="@+id/accountrowdebit"
+        android:layout_width="60dp"
+        android:padding="5dp"
+        android:layout_margin="1px"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:background="@android:color/white"/>
+    
+</TableRow>

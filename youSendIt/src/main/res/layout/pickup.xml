@@ -1,0 +1,299 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/jobpuagreed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Agreed pick up time" />
+        
+        <TextView
+            android:id="@+id/jobpudateagreed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp" />
+        
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="0.5dp"
+             android:layout_gravity="center_vertical"
+             android:padding="0dp"
+             android:layout_marginTop="20dp"
+             android:layout_marginBottom="20dp"
+             android:background="#c0c0c0"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpudidsuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobpunamedidsuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waiting for NNN to agree with your proposal to pick up on" />
+
+        <TextView
+            android:id="@+id/jobpudatedidsuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="18sp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpudidindicated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobpunamedidindicated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You&apos;ve indicated that you&apos;ve picked up the item. Please wait for NNN confirmation" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpuwaitindicated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobpunamewaitindicated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please wait for NNN to inform you that the item was collected" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpupickedup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The item has been picked up. See job progress for more details" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpullbeensuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobpubeensuggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NNN suggested to pick up on" />
+        
+        <TextView
+            android:id="@+id/jobpudatebeensuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp" 
+            android:padding="10dp"/>
+        
+	    <my.yousendit.peripherals.ApiButton
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="agree"
+	        app:busy="AGREEING..."
+	        app:free="AGREE" />
+        
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"/>
+        
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="16dp"
+	        android:orientation="horizontal">
+	        
+	         <View
+	             android:layout_width="0dp"
+	             android:layout_height="1dp"
+	             android:layout_weight="1"
+	             android:layout_gravity="center_vertical"
+	             android:padding="0dp"
+	             android:layout_marginRight="5dp"
+	             android:background="#c0c0c0"/>
+	
+	         <TextView
+	             android:layout_width="wrap_content"
+	             android:layout_height="match_parent"
+	             android:text="or" />
+	
+	         <View
+	             android:layout_width="0dp"
+	             android:layout_height="1dp"
+	             android:layout_weight="1"
+	             android:layout_gravity="center_vertical"
+	             android:padding="0dp"
+	             android:layout_marginLeft="5dp"
+	             android:background="#c0c0c0"/>
+	         
+	    </LinearLayout>
+	    
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/jobpulltosuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suggest a pick up time"/>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="10dp"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:visibility="visible">
+
+	       <EditText
+	           android:id="@+id/jobpudatetosuggest"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:background="@drawable/selectortextview"
+	           android:paddingLeft="0dp"
+	           android:paddingRight="0dp"
+	           android:paddingBottom="0dp"
+	           android:editable="false"
+	           android:clickable="true"
+	           android:minWidth="200dp"
+	           android:textSize="18sp"
+	           android:focusable="false"
+	           android:onClick="calendar"/>
+            	
+	        <ImageButton
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:background="@drawable/selectorvaliddate"
+	            android:gravity="center"
+	            android:onClick="calendar" />
+            
+        </LinearLayout>
+        
+	    <my.yousendit.peripherals.ApiButton
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="propose"
+	        app:busy="PROPOSING..."
+	        app:free="PROPOSE"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpulltoindicate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobputoindicate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="NNN did not acknowledge that you&apos;ve picked up the item.\nPlease talk to him.\nTap bellow to confirm it" />
+        
+	    <my.yousendit.peripherals.ApiButton
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="indicate"
+	        app:busy="INDICATING..."
+	        app:free="I'VE PICKED UP THE ITEM" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jobpullbeenindicated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/jobpubeenindicated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="NNN has indicated the item has been picked up.\n\nPlease confirm that this is true or false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+	        
+		    <my.yousendit.peripherals.ApiButton
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/grey_panel"
+		        android:textColor="@android:color/black"
+		        android:onClick="confirm"
+		        app:busy="DENYING..."
+		        app:free="NO" />
+	        
+		    <my.yousendit.peripherals.ApiButton
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:onClick="confirm"
+		        app:busy="CONFIRMING..."
+		        app:free="YES" />
+		    	                    
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

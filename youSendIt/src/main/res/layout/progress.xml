@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+    
+    <ListView
+        android:id="@+id/jobprlist"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:layout_height="0dp"/>
+    
+    <View
+        android:id="@+id/jobprgap"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center_vertical"
+        android:padding="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#c0c0c0"/>
+    
+    <LinearLayout
+        android:id="@+id/jobprcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:minHeight="150dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        
+ 	   <LinearLayout
+			android:id="@+id/jobprstatus"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="top"
+			android:orientation="horizontal">
+			
+	        <my.yousendit.peripherals.MySpinner
+	            app:label="Status"
+		 	    android:id="@+id/jobprstatusdropdown"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"/>
+			
+ 	   </LinearLayout>
+ 	   
+	   <View android:layout_width="match_parent" android:layout_height="15dp"/>
+ 	           
+ 	   <LinearLayout
+ 	       android:id="@+id/jobprpin"
+ 	       android:layout_width="match_parent"
+ 	       android:layout_height="wrap_content"
+ 	       android:orientation="vertical"
+ 	       android:visibility="gone" >
+ 	   
+	 	   <TextView
+	 	       android:layout_height="wrap_content"
+	 	       android:layout_width="match_parent"
+	 	       android:text="Please get the PIN number from recipient and enter below here"/>
+	 	   	   
+		    <my.yousendit.peripherals.MyTextBox
+		 	    android:id="@+id/jobprpinnumber"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        app:label="PIN"
+		        android:gravity="center"
+		        android:layout_gravity="center"
+		        app:showlabel="false"
+		        app:type="number">
+	
+		 	   <EditText
+		 	       android:layout_height="wrap_content"
+		 	       android:layout_width="wrap_content"
+		 	       android:layout_gravity="center"
+			       android:digits="abcdefghijklmnopqrstuvwxyz0123456789"
+			       android:maxLength="5"
+			       android:gravity="center"
+			       android:ems="5"/>
+	
+		    </my.yousendit.peripherals.MyTextBox>
+	 	
+	   </LinearLayout>
+	   
+	   <View android:layout_width="match_parent" android:layout_height="15dp"/>
+	   
+ 	   <LinearLayout
+ 	       android:id="@+id/jobprremark"
+ 	       android:layout_width="match_parent"
+ 	       android:layout_height="wrap_content"
+ 	       android:orientation="vertical"
+ 	       android:visibility="gone" >
+		    
+		    <my.yousendit.peripherals.MyTextBox
+				android:id="@+id/jobprremarktext"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:label="Remarks"
+		        app:type="plain">
+	
+			   <EditText
+		           android:inputType="textMultiLine"
+			       android:layout_height="wrap_content"
+			       android:layout_width="match_parent"/>
+	
+		    </my.yousendit.peripherals.MyTextBox>
+		
+ 	   </LinearLayout>
+ 	   
+	</LinearLayout>
+	
+	<View android:layout_width="match_parent" android:layout_height="10dp"/>
+
+    <my.yousendit.peripherals.ApiButton
+       android:id="@+id/jobprbtn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:onClick="update"
+       android:visibility="gone"
+       app:busy="UPDATING..."
+       app:free="UPDATE PROGRESS" />
+
+</LinearLayout>

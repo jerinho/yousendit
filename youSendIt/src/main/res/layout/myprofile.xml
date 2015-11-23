@@ -1,0 +1,245 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    
+        <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	        
+		    <ImageView
+		        android:id="@+id/profileimg"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:scaleType="fitXY"
+				android:adjustViewBounds="true"
+		        android:background="@android:color/black"/>
+		    
+		    <ImageButton
+		        android:id="@+id/profileimgchange"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:background="@drawable/button_edit"
+		        android:onClick="image" />
+		    
+        </RelativeLayout>
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:padding="15dp">
+	        
+		    <my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/profileemail"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:label="Email"
+		        app:type="email">
+	
+		        <EditText
+		            android:inputType="textEmailAddress"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"/>
+	
+		    </my.yousendit.peripherals.MyTextBox>
+		    
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="15dp"/>
+		    
+		    <my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/profilename"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:label="Display Name"
+		        app:type="plain">
+	
+		        <EditText
+		            android:inputType="textCapWords"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"/>
+	
+		    </my.yousendit.peripherals.MyTextBox>
+		    
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="15dp"/>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="Password" />
+		
+		        <Button
+		            android:id="@+id/profilepassword"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="left"
+		            android:background="@null"
+		            android:gravity="center"
+		            android:onClick="password"
+		            android:text="CHANGE PASSWORD"
+		            android:textColor="@color/theme" />
+		
+		    </LinearLayout>
+		    
+		    <my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/profilelocation"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:label="Location"
+		        app:type="plain">
+	
+		        <EditText
+		            android:clickable="true"
+		            android:focusable="false"
+		            android:layout_width="match_parent"
+		            android:inputType="none"
+		            android:layout_weight="1"
+		            android:layout_height="wrap_content"/>
+	
+		    </my.yousendit.peripherals.MyTextBox>
+		    
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="15dp"/>
+	        
+		    <my.yousendit.peripherals.ApiButton
+		        android:id="@+id/profileupdate"
+		        android:onClick="update"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:free="UPDATE"
+		        app:busy="UPDATING..."/>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/profilelinks"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	        	android:paddingLeft="15dp"
+	        	android:paddingRight="15dp"
+	        	android:paddingTop="5dp"
+	            android:paddingBottom="5dp">
+	            
+	            <Button
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical|left"
+	                android:onClick="jump"
+	                android:background="@null"
+	                android:text="Account History" />
+	            
+	            <ImageButton
+	                android:layout_width="30dp"
+	                android:layout_height="30dp"
+	                android:onClick="jump"
+	                android:background="@drawable/icon_next"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	        	android:paddingLeft="15dp"
+	        	android:paddingRight="15dp"
+	        	android:paddingTop="5dp"
+	            android:paddingBottom="5dp" >
+	            
+	            <Button
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical|left"
+	                android:onClick="jump"
+	                android:background="@null"
+	                android:text="Payment" />
+	            
+	            <ImageButton
+	                android:layout_width="30dp"
+	                android:layout_height="30dp"
+	                android:onClick="jump"
+	                android:background="@drawable/icon_next"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	        	android:paddingLeft="15dp"
+	        	android:paddingRight="15dp"
+	        	android:paddingTop="5dp"
+	            android:paddingBottom="5dp" >
+	            
+	            <Button
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical|left"
+	                android:onClick="jump"
+	                android:background="@null"
+	                android:text="Job History" />
+	            
+	            <ImageButton
+	                android:layout_width="30dp"
+	                android:layout_height="30dp"
+	                android:onClick="jump"
+	                android:background="@drawable/icon_next"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	        	android:paddingLeft="15dp"
+	        	android:paddingRight="15dp"
+	        	android:paddingTop="5dp"
+	            android:paddingBottom="5dp">
+	            
+	            <Button
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical|left"
+	                android:onClick="jump"
+	                android:background="@null"
+	                android:text="Ratings And Reviews" />
+	            
+	            <ImageButton
+	                android:layout_width="30dp"
+	                android:layout_height="30dp"
+	                android:onClick="jump"
+	                android:background="@drawable/icon_next"/>
+	            
+	        </LinearLayout>
+	        	        
+	    </LinearLayout>
+		    
+	</LinearLayout>
+	
+</ScrollView>

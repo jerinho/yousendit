@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:background="@drawable/cover_sidenav"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/drawerimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/photo_profile_round" />
+
+        <TextView
+            android:id="@+id/drawername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="My name"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/draweremail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="myemail@yahoo.com"
+            android:textColor="@android:color/white" />
+        
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableLayout
+            android:id="@+id/drawertable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:tag="home"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_home" />
+
+                <TextView android:text="Home"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+
+            <TableRow
+                android:tag="job"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_myjob" />
+
+                <TextView android:text="My Job"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+
+            <TableRow
+                android:tag="chat"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_chat" />
+
+                <TextView android:text="Chat"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+
+            <TableRow
+                android:tag="notification"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_notifications" />
+
+                <TextView android:text="Notification"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+
+            <TableRow
+                android:tag="profile"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_profile" />
+
+                <TextView android:text="Profile"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+
+            <TableRow
+                android:padding="15dp"
+                android:tag="logout">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:src="@drawable/icon_sidenav_logout"/>
+
+                <TextView android:text="Logout"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:clickable="true"
+                    android:onClick="click"
+                    android:gravity="center_vertical"/>
+                
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!--
+         view
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    class="my.yousendit.peripherals.DrawerList"
+	    android:id="@+id/drawerlistview"
+	    android:layout_width="240dp"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="start"
+	    android:choiceMode="singleChoice"/
+    -->
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    <!--
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item>
+    </style>
+    <style name="MyActionBarTabs" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/actionbar_tab_indicator</item>
+    </style>
+    -->
+</resources>

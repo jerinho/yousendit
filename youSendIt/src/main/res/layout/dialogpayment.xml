@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+    
+	<my.yousendit.peripherals.MyTextBox
+        android:id="@+id/paymentccnumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:label="Credit card number"
+		app:type="number">
+	
+        <EditText
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:maxLength="16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+	
+	</my.yousendit.peripherals.MyTextBox>
+	
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="10dp"/>
+	
+	<my.yousendit.peripherals.MyTextBox
+        android:id="@+id/paymentccsecurity"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:label="CCV"
+		app:type="number">
+	
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:maxLength="4" />
+	
+	</my.yousendit.peripherals.MyTextBox>
+	
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="15dp"/>
+	
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:text="Expiry"
+        android:textColor="@android:color/black" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <my.yousendit.peripherals.MySpinner
+            android:id="@+id/paymentccmonth"
+            app:label="Month"
+		    app:showlabel="false"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        
+        <View android:layout_width="10dp" android:layout_height="match_parent"/>
+
+        <my.yousendit.peripherals.MySpinner
+            android:id="@+id/paymentccyear"
+            app:label="Year"
+		    app:showlabel="false"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    
+    <!--    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <NumberPicker
+            android:id="@+id/paymentccmonth"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="120dp"/>
+
+        <NumberPicker
+            android:id="@+id/paymentccyear"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="120dp"/>
+
+    </LinearLayout>
+    -->
+	    
+</LinearLayout>

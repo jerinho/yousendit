@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery PIN"/>
+    
+    <View android:layout_width="match_parent" android:layout_height="20dp"/>
+    
+    <TextView
+        android:id="@+id/receiverpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="45dp"
+        android:text="*****"/>
+    
+    <View android:layout_width="match_parent" android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share this to your recipient to verify delivery"/>
+    
+    <View android:layout_width="match_parent" android:layout_height="20dp"/>
+    
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:padding="0dp"
+       android:background="@drawable/button"
+       android:textColor="@android:color/white"
+       android:onClick="share"
+       android:text="SHARE" />
+   
+</LinearLayout>

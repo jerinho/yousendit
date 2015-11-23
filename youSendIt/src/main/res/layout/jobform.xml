@@ -1,0 +1,185 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="10dp" >
+	    
+		<LinearLayout
+		    android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+			<my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/jobfmfrom"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				app:label="Pick up from"
+				app:type="plain">
+			
+		        <EditText
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:editable="false"
+		            android:focusable="false"
+		            android:inputType="none"/>
+			
+			</my.yousendit.peripherals.MyTextBox>
+			
+			<ImageButton
+			    android:background="@drawable/selectorlocation"
+			    android:layout_gravity="bottom"
+			    android:onClick="pickfrom"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"/>
+			
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_height="10dp"
+		    android:layout_width="match_parent"/>
+		
+		<LinearLayout
+		    android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		    
+			<my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/jobfmto"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				app:label="Destination"
+				app:type="plain">
+			
+		        <EditText
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:editable="false"
+		            android:focusable="false"
+		            android:inputType="none"/>
+			
+			</my.yousendit.peripherals.MyTextBox>
+			
+			<ImageButton
+			    android:background="@drawable/selectorlocation"
+			    android:layout_gravity="bottom"
+			    android:onClick="pickto"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"/>
+		    
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_height="10dp"
+		    android:layout_width="match_parent"/>
+		
+		<LinearLayout
+		    android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+	        <my.yousendit.peripherals.MySpinner
+	            android:id="@+id/jobfmurgency"
+	            app:label="Urgency"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"/>
+	        
+			<LinearLayout android:layout_width="10dp" android:layout_height="match_parent"/>
+	        
+	        <my.yousendit.peripherals.MySpinner
+	            android:id="@+id/jobfmsize"
+	            app:label="Size"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_height="10dp"
+		    android:layout_width="match_parent"/>
+	    				
+		<LinearLayout
+		    android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		    
+			<my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/jobfmfee"
+	            android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:label="Service charge"
+				app:type="plain">
+			
+		        <EditText
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:inputType="numberDecimal"
+		            android:layout_weight="1" />
+			
+			</my.yousendit.peripherals.MyTextBox>
+			
+			<LinearLayout
+			    android:layout_width="10dp"
+			    android:layout_height="wrap_content"/>
+			
+			<my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/jobfmvalid"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+				android:layout_height="wrap_content"
+				app:label="Valid until"
+				app:type="plain">
+			
+		        <EditText
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:editable="false"
+		            android:inputType="none"
+		            android:focusable="false"
+		            android:layout_weight="1"/>
+			
+			</my.yousendit.peripherals.MyTextBox>
+			
+			<ImageButton
+			    android:background="@drawable/selectorvaliddate"
+			    android:layout_gravity="bottom"
+			    android:onClick="pickValidDate"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"/>
+		    
+		</LinearLayout>
+		
+		<LinearLayout android:layout_height="30dp" android:layout_width="match_parent"/>
+
+	    <view
+	        android:id="@+id/jobfmimageflow"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        class="my.helper.ImageFlow"/>
+	    
+		<LinearLayout
+		    android:layout_height="10dp"
+		    android:layout_width="match_parent"/>
+	    
+	    <my.yousendit.peripherals.ApiButton
+	        android:id="@+id/jobscsubmit"
+	        android:onClick="submit"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"/>
+	    
+	</LinearLayout>
+</ScrollView>

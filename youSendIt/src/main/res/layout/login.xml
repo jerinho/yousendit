@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    
+	<TextView
+	     android:id="@+id/loginerror"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:background="@color/grey"
+	     android:gravity="left"
+	     android:padding="16dp"
+	     android:textColor="@color/theme"
+	     android:textSize="12sp"
+	     android:visibility="gone" />
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splashscreen"
+        android:orientation="vertical" >
+        
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:orientation="horizontal"
+		    android:padding="20dp"
+	        android:gravity="center">
+	        
+		    <ImageView
+		        android:id="@+id/loginicon"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:adjustViewBounds="true"
+		        android:maxWidth="300dp"
+		        android:src="@drawable/icon_logo" />
+		    
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/loginwrapper"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="16dp"
+	        android:paddingRight="16dp"
+	        android:gravity="center_horizontal"
+	        android:background="@android:color/white"
+	        android:orientation="vertical">
+		    
+		    <View android:layout_width="match_parent" android:layout_height="16dp"/>
+		    	    
+		    <my.yousendit.peripherals.MyTextBox
+		        android:id="@+id/txtem"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:label="Email"
+		        app:type="email">
+	
+		        <EditText
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:inputType="textEmailAddress" />
+	
+		    </my.yousendit.peripherals.MyTextBox>
+		    
+		    <View android:layout_width="match_parent" android:layout_height="32dp"/>
+		    	    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal">
+		        
+			    <my.yousendit.peripherals.MyTextBox
+			        android:id="@+id/txtpw"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        app:label="Password"
+			        app:type="password">
+			        
+			        <EditText
+			            android:inputType="textPassword"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"/>
+			        
+			    </my.yousendit.peripherals.MyTextBox>
+		        
+			    <Button
+			        android:layout_width="10dp"
+			        android:layout_height="match_parent"
+			        android:layout_weight="0.02"
+			        android:background="@null"
+			        android:clickable="true"
+			        android:gravity="bottom|right"
+			        android:onClick="forgot"
+			        android:paddingBottom="2dp"
+			        android:text="\?"
+			        android:textColor="@android:color/darker_gray"
+			        android:textSize="25sp" />
+			    
+		    </LinearLayout>
+		    
+		    <View android:layout_width="match_parent" android:layout_height="24dp"/>
+		        
+		    <my.yousendit.peripherals.ApiButton
+		        android:id="@+id/btnlogin"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:onClick="login"
+		        app:busy="SIGNING IN..."
+		        app:free="SIGN IN" />
+		    
+		    <View android:layout_width="match_parent" android:layout_height="24dp"/>
+		    
+		    <!-- Uncomment this when FACEBOOK login can already be used
+		    	    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="16dp"
+		        android:orientation="horizontal">
+			    
+		         <View
+		             android:layout_width="0dp"
+		             android:layout_height="1dp"
+		             android:layout_weight="1"
+		             android:layout_gravity="center_vertical"
+		             android:padding="0dp"
+		             android:layout_marginRight="5dp"
+		             android:background="#c0c0c0"/>
+		
+		         <TextView
+		             android:layout_width="wrap_content"
+		             android:layout_height="match_parent"
+		             android:text="or" />
+		
+		         <View
+		             android:layout_width="0dp"
+		             android:layout_height="1dp"
+		             android:layout_weight="1"
+		             android:layout_gravity="center_vertical"
+		             android:padding="0dp"
+		             android:layout_marginLeft="5dp"
+		             android:background="#c0c0c0"/>
+		    </LinearLayout>
+		    
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="24dp"/>
+		    
+		    <Button
+		        android:id="@+id/btnfacebook"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:onClick="facebook"
+		        android:background="@drawable/selectorfb"
+		        android:textColor="#ffffff"
+	    		android:textSize="16sp"
+	    		android:text="LOGIN WITH FACEBOOK"
+	    		android:fontFamily="sans-serif-medium"/>
+	    		
+	    	-->
+		    
+		    <!-- Programatically
+	    		label.setTextSize(TypedValue.COMPLEX_UNIT_SP,16f);
+	    		label.setTypeface(Typeface.SANS_SERIF,Typeface.NORMAL);
+	    	-->
+		   	
+	    </LinearLayout>
+        
+    </LinearLayout>
+	    
+</LinearLayout>

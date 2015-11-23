@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingBottom="150dp">
+        
+	    <ImageView
+	        android:id="@+id/splashicon"
+	        android:layout_height="100dp"
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/icon_logo"/>
+        
+    </LinearLayout>
+    
+    <ProgressBar
+        android:id="@+id/splashbusy"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/splashstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:gravity="center"
+        android:textSize="15sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:id="@+id/testbuttons"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        
+	    <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="resume"
+	        android:layout_gravity="center|bottom"
+	        android:text="Resume"/>
+	    
+	    <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="test"
+	        android:layout_gravity="center|bottom"
+	        android:text="TEST" />
+	    
+    </LinearLayout>
+
+</LinearLayout>

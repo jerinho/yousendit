@@ -1,0 +1,48 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<style name="MyTheme" parent="@style/Theme.AppCompat.Light">
+	    <item name="android:windowBackground">@color/window</item>
+	    <item name="android:actionBarStyle">@style/MyActionBar</item>
+		<item name="android:actionBarTabTextStyle">@style/MyTabText</item>
+		<item name="android:actionBarTabBarStyle">@style/MyTabBar</item>
+		<item name="android:actionBarTabStyle">@style/MyTab</item>
+		<item name="android:actionBarItemBackground">@null</item>
+		<item name="android:homeAsUpIndicator">@drawable/selectorup</item>
+    	<item name="android:actionMenuTextColor">@color/white</item>
+    	<item name="android:actionMenuTextAppearance">@style/MyMenu</item>
+    	<item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/theme</item>
+		<item name="android:titleTextStyle">@style/MyTitle</item>
+    </style>
+    
+    <style name="MyTabBar" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@color/theme</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+    
+    <style name="MyTabText" parent="@style/Widget.AppCompat.Light.ActionBar.TabText">
+        <item name="android:textColor">@drawable/tab_text</item>
+	</style>
+	
+    <style name="MyTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="MyMenu" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="MyTab" parent="@style/Widget.AppCompat.Light.ActionBar.TabBar">
+        <item name="android:background">@drawable/tab_indicator</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+	<style name="MyDrawer" parent="@style/MyTheme">
+		<item name="android:homeAsUpIndicator">@drawable/selectordrawer</item>
+	</style>
+		
+</resources>

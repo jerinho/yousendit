@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal">
+            
+    <ImageView
+        android:id="@+id/chatuserimage"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/photo_profile_round"/>
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        
+	    <TextView
+	        android:id="@+id/chatusername"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"/>
+	    
+	    <TextView
+	        android:id="@+id/chatusermessage"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+	    <TextView
+	        android:id="@+id/chatusertime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"/>
+	    
+	    <TextView
+	        android:id="@+id/chatusercount"
+	        android:layout_width="20dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="right|bottom"
+	        android:gravity="center"
+	        android:background="@drawable/counter_xnp" />
+        
+    </LinearLayout>
+
+</LinearLayout>

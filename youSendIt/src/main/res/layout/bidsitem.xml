@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal">
+    
+    <ImageView
+        android:id="@+id/jobbidimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/photo_profile_round" />
+
+    <LinearLayout
+        android:id="@+id/jobbidwrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+        
+        <!-- Name wrapper layout max width = parent width - award button width - chat button width -->
+	        
+		<TextView
+		    android:id="@+id/jobbidname"
+		    android:text="bidder name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:inputType="textMultiLine"
+		    android:singleLine="false"
+		    android:maxWidth="180dp"
+		    android:paddingBottom="5dp"
+		    android:scrollHorizontally="true"/>
+
+	    <RatingBar
+	        android:id="@+id/jobbidrate"
+	        style="?android:attr/ratingBarStyleSmall"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:cropToPadding="true"
+	        android:isIndicator="true"
+	        android:numStars="5" />
+
+	</LinearLayout>
+	
+	<View
+	    android:layout_width="0dp"
+	    android:layout_height="match_parent"
+	    android:layout_weight="1" />
+	
+    <ImageButton
+        android:id="@+id/jobbidaward"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/selectoraward"
+        android:onClick="accept"/>
+
+    <ImageButton
+        android:id="@+id/jobbidchat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/selectorchat"
+        android:onClick="chat"/>
+       
+</LinearLayout>

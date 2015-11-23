@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        
+	<view
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    class="my.yousendit.UserProfile$MyScroller"
+	    android:id="@+id/publicscroller"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbars="none">
+	    
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content">
+		        
+			    <ImageView
+			        android:scaleType="fitXY"
+					android:adjustViewBounds="true"
+			        android:id="@+id/publicimg"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:background="@android:color/black"/>
+		        			    
+			    <TextView
+			        android:id="@+id/publicname"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:background="#8fff"
+			        android:gravity="left"
+			        android:paddingTop="5dp"
+			        android:paddingBottom="5dp"
+			        android:paddingLeft="15dp"
+			        android:textColor="@color/white"
+			        android:textSize="20dp" />
+		        
+		    </RelativeLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/publicdetailswrap"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="15dp"
+		        android:orientation="vertical">
+
+			    <TextView
+			        android:text="Location"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"/>
+
+			    <TextView
+			        android:id="@+id/publicloc"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@android:color/black"/>
+
+			    <TextView
+			        android:text="Job history"
+			        android:layout_width="match_parent"
+			        android:paddingTop="20dp"
+			        android:layout_height="wrap_content"/>
+
+			    <TextView
+			        android:id="@+id/publichistory"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@android:color/black"/>
+
+			    <TextView
+			        android:text="Ratings and reviews"
+			        android:layout_width="match_parent"
+			        android:paddingTop="20dp"
+			        android:layout_height="wrap_content"/>
+
+			    <LinearLayout
+			        android:id="@+id/publiclatest"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical"/>
+
+			    <TextView
+			        android:id="@+id/publicallrev"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="ALL REVIEWS"
+			        android:padding="15dp"
+			        android:textColor="#a00"/>
+			    
+			</LinearLayout>
+			
+		</LinearLayout>
+
+	</view>
+
+	<ListView
+	    android:id="@+id/publicreviews"
+	    android:visibility="gone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="50dp"
+	    android:padding ="15dp"/>
+
+</LinearLayout>
